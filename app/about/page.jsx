@@ -99,7 +99,7 @@ const AboutPage = () => {
                         <div className="relative">
                             <div className="bg-[#D4A574] rounded-3xl overflow-hidden shadow-2xl">
                                 <div className="aspect-square flex items-center justify-center text-9xl">
-                                    <img src="/cookie.png" alt="" />
+                                    <img src="/logo.jpeg" alt="" />
                                 </div>
                             </div>
                             <div className="absolute -top-4 -left-4 text-6xl">✨</div>
