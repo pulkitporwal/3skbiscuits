@@ -87,44 +87,70 @@ const cookiesWebsite = () => {
   return (
     <div className="min-h-screen bg-[#F5EBD9] font-sans text-[#3E2A1D]">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-[#F5EBD9] border-b-2 border-[#D4A574] shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <Image src="/logo.jpeg" alt="3SK Cookies logo" width={32} height={32} />
-              <span className="ml-2 text-2xl font-bold text-[#6B4423]">3SK Cookies</span>
-              <span>
-                <img src={"/om.png"} className='w-10 h-10 ml-4' />
-              </span>
-            </div>
+   <header className="sticky top-0 z-50 bg-[#F5EBD9] border-b-2 border-[#D4A574] shadow-sm">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex justify-between items-center h-16">
+      <div className="flex items-center">
+        <Image src="/logo.jpeg" alt="3SK Cookies logo" width={32} height={32} />
+        <span className="ml-2 text-2xl font-bold text-[#6B4423]">3SK Cookies</span>
+        <img src="/om.png" className="w-10 h-10 ml-4" />
+      </div>
 
-            <nav className="hidden md:flex space-x-8">
-              <a href="#shop" className="hover:text-[#C17A3F] transition">Shop</a>
-              <a href="/about" className="hover:text-[#C17A3F] transition">About</a>
-            </nav>
+      {/* Desktop Menu */}
+      <nav className="hidden md:flex space-x-8">
+        <a href="#shop" className="hover:text-[#C17A3F] transition">Shop</a>
+        <a href="/about" className="hover:text-[#C17A3F] transition">About</a>
+      </nav>
 
-            <div className="flex items-center space-x-4">
-              <button className="hover:text-[#C17A3F] transition">
-                <Heart className="w-5 h-5" />
-              </button>
-              <button className="relative hover:text-[#C17A3F] transition">
-                <ShoppingCart className="w-5 h-5" />
-                {cartCount > 0 && (
-                  <span className="absolute -top-2 -right-2 bg-[#C17A3F] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                    {cartCount}
-                  </span>
-                )}
-              </button>
-              <button
-                className="md:hidden"
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              >
-                {mobileMenuOpen ? <X /> : <Menu />}
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
+      <div className="flex items-center space-x-4">
+        <button className="hover:text-[#C17A3F] transition">
+          <Heart className="w-5 h-5" />
+        </button>
+
+        <button className="relative hover:text-[#C17A3F] transition">
+          <ShoppingCart className="w-5 h-5" />
+          {cartCount > 0 && (
+            <span className="absolute -top-2 -right-2 bg-[#C17A3F] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+              {cartCount}
+            </span>
+          )}
+        </button>
+
+        {/* Mobile Toggle Button */}
+        <button
+          className="md:hidden"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? <X /> : <Menu />}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  {/* ⭐ Mobile Dropdown BELOW the header ⭐ */}
+  {mobileMenuOpen && (
+    <div className="md:hidden bg-[#F5EBD9] border-t border-[#D4A574] shadow-sm">
+      <nav className="flex flex-col space-y-4 py-4 px-6">
+        <a
+          href="#shop"
+          className="text-lg font-medium hover:text-[#C17A3F] transition"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          Shop
+        </a>
+
+        <a
+          href="/about"
+          className="text-lg font-medium hover:text-[#C17A3F] transition"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          About
+        </a>
+      </nav>
+    </div>
+  )}
+</header>
+
 
       {/* Hero Section */}
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-b from-[#EFE0C7] to-[#F5EBD9]">
@@ -156,10 +182,10 @@ const cookiesWebsite = () => {
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <div className="mb-8">
             <h1 className="text-5xl md:text-7xl font-bold text-[#6B4423] mb-4 animate-fade-in-up">
-              Baked with Joy,
+              Focus on purity and trust
             </h1>
             <h1 className="text-5xl md:text-7xl font-bold text-[#6B4423] mb-6 animate-fade-in-up animation-delay-200">
-              Crafted with Care
+              with traditional indian flavours
             </h1>
           </div>
 

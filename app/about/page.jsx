@@ -17,37 +17,67 @@ const AboutPage = () => {
     return (
         <div className="min-h-screen bg-[#F5EBD9] font-sans text-[#3E2A1D]">
             {/* Header */}
-            <header className="sticky top-0 z-50 bg-[#F5EBD9] border-b-2 border-[#D4A574] shadow-sm">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between items-center h-16">
-                        <div className="flex items-center">
-                            <span className="text-2xl font-bold text-[#6B4423]">🍪 3SK Cookies</span>
-                        </div>
-
-                        <nav className="hidden md:flex space-x-8">
-                            <a href="#" className="hover:text-[#C17A3F] transition">Shop</a>
-                            <a href="#" className="hover:text-[#C17A3F] transition">About</a>
-                            <a href="#" className="hover:text-[#C17A3F] transition">Story</a>
-                            <a href="#" className="hover:text-[#C17A3F] transition">Contact</a>
-                        </nav>
-
-                        <div className="flex items-center space-x-4">
-                            <button className="hover:text-[#C17A3F] transition">
-                                <Heart className="w-5 h-5" />
-                            </button>
-                            <button className="relative hover:text-[#C17A3F] transition">
-                                <ShoppingCart className="w-5 h-5" />
-                            </button>
-                            <button
-                                className="md:hidden"
-                                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                            >
-                                {mobileMenuOpen ? <X /> : <Menu />}
-                            </button>
-                        </div>
-                    </div>
+      <header className="sticky top-0 z-50 bg-[#F5EBD9] border-b-2 border-[#D4A574] shadow-sm">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex justify-between items-center h-16">
+                <div className="flex items-center">
+                  <Image src="/logo.jpeg" alt="3SK Cookies logo" width={32} height={32} />
+                  <span className="ml-2 text-2xl font-bold text-[#6B4423]">3SK Cookies</span>
+                  <span>
+                    <img src={"/om.png"} className='w-10 h-10 ml-4' />
+                  </span>
                 </div>
-            </header>
+                {/* Mobile Dropdown Menu */}
+                {mobileMenuOpen && (
+                  <div className="md:hidden bg-[#F5EBD9] border-b-2 border-[#D4A574] shadow-sm">
+                    <nav className="flex flex-col space-y-4 py-4 px-6">
+                      <a
+                        href="#shop"
+                        className="text-lg font-medium hover:text-[#C17A3F] transition"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        Shop
+                      </a>
+    
+                      <a
+                        href="/about"
+                        className="text-lg font-medium hover:text-[#C17A3F] transition"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        About
+                      </a>
+                    </nav>
+                  </div>
+                )}
+    
+    
+                <nav className="hidden md:flex space-x-8">
+                  <a href="#shop" className="hover:text-[#C17A3F] transition">Shop</a>
+                  <a href="/about" className="hover:text-[#C17A3F] transition">About</a>
+                </nav>
+    
+                <div className="flex items-center space-x-4">
+                  <button className="hover:text-[#C17A3F] transition">
+                    <Heart className="w-5 h-5" />
+                  </button>
+                  <button className="relative hover:text-[#C17A3F] transition">
+                    <ShoppingCart className="w-5 h-5" />
+                    {cartCount > 0 && (
+                      <span className="absolute -top-2 -right-2 bg-[#C17A3F] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                        {cartCount}
+                      </span>
+                    )}
+                  </button>
+                  <button
+                    className="md:hidden"
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                  >
+                    {mobileMenuOpen ? <X /> : <Menu />}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </header>
 
             {/* Hero Section */}
             <section className="py-20 px-4 bg-linear-to-b from-[#EFE0C7] to-[#F5EBD9]">
