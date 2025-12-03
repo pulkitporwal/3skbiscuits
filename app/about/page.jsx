@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import Image from 'next/image';
 import { Heart, Menu, X, ShoppingCart, ChevronDown, Award, Leaf, Target, Instagram, Facebook, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const AboutPage = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
