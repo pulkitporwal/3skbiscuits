@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { MessageCircle, Heart, Star, ChevronRight, Check, Minus, Plus, Instagram, Facebook } from 'lucide-react';
 import { useParams } from 'next/navigation';
+import Link from 'next/link';
 
 const ProductPage = () => {
   const { id } = useParams()
@@ -12,7 +13,7 @@ const ProductPage = () => {
   const productsData = {
     oats: {
       name: "Oat cookies",
-      price: "199/Box of 200 GMs",
+      price: "₹199/Box of 200 GMs",
       tagline: "Nutritious snack with high fiber content",
       image: "/products/oats/1.jpeg",
       images: ["/products/oats/1.jpeg"],
@@ -63,7 +64,7 @@ const ProductPage = () => {
 
     coconut: {
       name: "Coconut cookies",
-      price: "199/Box of 200 GMs",
+      price: "₹199/Box of 200 GMs",
       tagline: "Healthy fats and fiber for sustained energy",
       image: "/products/coconut/1.jpeg",
       images: ["/products/coconut/1.jpeg", "/products/coconut/2.jpeg"],
@@ -114,7 +115,7 @@ const ProductPage = () => {
 
     namkeen: {
       name: "Namkeen Cookies",
-      price: "199/Box of 200 GMs",
+      price: "₹199/Box of 200 GMs",
       tagline: "Traditional healthy savory snack with digestive benefits",
       image: "/products/namkeen/1.jpeg",
       images: ["/products/namkeen/1.jpeg"],
@@ -165,7 +166,7 @@ const ProductPage = () => {
 
     suji: {
       name: "Suji cookies",
-      price: "199/Box of 200 GMs",
+      price: "₹199/Box of 200 GMs",
       tagline: "Semolina-based nutrition for sustained energy",
       image: "/products/suji/1.jpeg",
       images: ["/products/suji/1.jpeg"],

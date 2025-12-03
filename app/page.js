@@ -21,7 +21,7 @@ const products = [
     id: "oats",
     name: "Oat cookies",
     tagline: "Nutritious snack with high fiber content",
-    price: "199/Box of 200 GMs",
+    price: "₹199/Box of 200 GMs",
     category: "Healthy",
     tags: ["Bestseller", "Heart-Healthy", "High Fiber"],
     image: "/products/oats/1.jpeg"
@@ -30,7 +30,7 @@ const products = [
     id: "coconut",
     name: "Coconut cookies",
     tagline: "Healthy fats and fiber for sustained energy",
-    price: "199/Box of 200 GMs",
+    price: "₹199/Box of 200 GMs",
     category: "Healthy",
     tags: ["Popular", "Energy Boost", "Immunity"],
     image: "/products/coconut/1.jpeg"
@@ -39,7 +39,7 @@ const products = [
     id: "namkeen",
     name: "Namkeen Cookies",
     tagline: "Traditional healthy savory snack with digestive benefits",
-    price: "199/Box of 200 GMs",
+    price: "₹199/Box of 200 GMs",
     category: "Savory",
     tags: ["Digestive Health", "No Maida", "Traditional"],
     image: "/products/namkeen/1.jpeg"
@@ -48,7 +48,7 @@ const products = [
     id: "suji",
     name: "Suji cookies",
     tagline: "Semolina-based nutrition for sustained energy",
-    price: "199/Box of 200 GMs",
+    price: "₹199/Box of 200 GMs",
     category: "Healthy",
     tags: ["Weight Management", "Heart-Healthy", "Nutrient-Rich"],
     image: "/products/suji/1.jpeg"
@@ -184,9 +184,9 @@ const cookiesWebsite = () => {
               Explore Our cookies
             </a>
 
-            <button className="border-2 border-[#C17A3F] text-[#C17A3F] px-8 py-4 rounded-full font-semibold hover:bg-[#C17A3F] hover:text-white transition-all">
+            <Link href={"/about"} className="border-2 border-[#C17A3F] text-[#C17A3F] px-8 py-4 rounded-full font-semibold hover:bg-[#C17A3F] hover:text-white transition-all">
               Learn Our Story →
-            </button>
+            </Link>
           </div>
 
           <div className="mt-12 flex justify-center gap-8 text-center animate-fade-in-up animation-delay-1000">
@@ -419,7 +419,7 @@ const cookiesWebsite = () => {
 
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-bold text-[#6B4423]">
-                      ${product.price}
+                      {product.price}
                     </span>
                     <Link
                       href={`/product/${product.id}`}
