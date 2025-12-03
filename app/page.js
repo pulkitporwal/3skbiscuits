@@ -93,6 +93,9 @@ const cookiesWebsite = () => {
             <div className="flex items-center">
               <Image src="/logo.jpeg" alt="3SK Cookies logo" width={32} height={32} />
               <span className="ml-2 text-2xl font-bold text-[#6B4423]">3SK Cookies</span>
+              <span>
+                <img src={"/om.png"} className='w-10 h-10 ml-4' />
+              </span>
             </div>
 
             <nav className="hidden md:flex space-x-8">
@@ -425,7 +428,7 @@ const cookiesWebsite = () => {
                       href={`/product/${product.id}`}
                       className="bg-[#C17A3F] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#6B4423] transition-colors"
                     >
-                      View 
+                      View
                     </Link>
                   </div>
 

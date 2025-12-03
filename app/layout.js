@@ -30,9 +30,6 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         cz-shortcut-listen="true"
       >
-        <div className="flex items-center justify-center py-2 bg-[#F5EBD9]">
-          <img src={"/om.png"} className="2-4 h-4" />
-        </div>
         {children}
       </body>
     </html>

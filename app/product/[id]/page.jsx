@@ -233,6 +233,9 @@ const ProductPage = () => {
             <div className="flex items-center">
               <span className="text-3xl"><img src="/logo.jpeg" alt="3SK Cookies" width={32} height={32} /></span>
               <span className="ml-2 text-2xl font-bold text-[#6B4423]">3SK Cookies</span>
+              <span>
+                <img src={"/om.png"} className='w-10 h-10 ml-4' />
+              </span>
             </div>
 
             <button className="hover:text-[#C17A3F] transition">
