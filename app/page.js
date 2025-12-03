@@ -517,8 +517,8 @@ const cookiesWebsite = () => {
                 <ul className="space-y-2 text-[#B8956A]">
                   <Link href={"/product/oats"}><li>Oats Cookies</li></Link>
                   <Link href={"/product/namkeen"}><li>Namkeen Cookies</li></Link>
-                  <Link href={"/product/suji"}><li>Gift Boxes</li></Link>
-                  <Link href={"/product/coconut"}><li>Gift Boxes</li></Link>
+                  <Link href={"/product/suji"}><li>Suji Cookies</li></Link>
+                  <Link href={"/product/coconut"}><li>Coconut Cookies</li></Link>
                 </ul>
               </div>
             </div>
