@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root{
-  --biscuit-50: #F5E9DF;
-  --biscuit-100:#EBDCC9;
-  --biscuit-300:#D9A066;
-  --biscuit-500:#C67E4A; /* primary biscuit brown */
-  --biscuit-700:#9A532A;
+  --cookies-50: #F5E9DF;
+  --cookies-100:#EBDCC9;
+  --cookies-300:#D9A066;
+  --cookies-500:#C67E4A; /* primary cookies brown */
+  --cookies-700:#9A532A;
   --accent-1: #7B4A2E; /* deep brown for text */
   --cream: #FFF6ED;
   --chocolate: #6B3E26;

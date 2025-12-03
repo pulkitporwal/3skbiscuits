@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 import Image from 'next/image';
 import useGsap from '@/lib/gsap';
 
-export default function Hero({ title = "Freshly Baked Happiness, One Biscuit at a Time!" }) {
+export default function Hero({ title = "Freshly Baked Happiness, One cookies at a Time!" }) {
   const rootRef = useRef(null);
 
   useGsap((gsap, ScrollTrigger) => {
@@ -48,12 +48,12 @@ export default function Hero({ title = "Freshly Baked Happiness, One Biscuit at 
           <h1 className="headline text-4xl md:text-6xl font-extrabold text-chocolate leading-tight">
             {title}
           </h1>
-          <p className="sub mt-4 text-lg text-biscuit-700 max-w-xl">
-            Small-batch oat biscuits, baked with premium ingredients — taste the crunchy goodness.
+          <p className="sub mt-4 text-lg text-cookies-700 max-w-xl">
+            Small-batch oat cookies, baked with premium ingredients — taste the crunchy goodness.
           </p>
           <div className="mt-6 flex items-center gap-4">
-            <a className="cta inline-block px-6 py-3 rounded-lg font-semibold bg-biscuit-500 text-white shadow-lg hover:opacity-95">Shop Flavours</a>
-            <button className="text-biscuit-700 underline">Learn more</button>
+            <a className="cta inline-block px-6 py-3 rounded-lg font-semibold bg-cookies-500 text-white shadow-lg hover:opacity-95">Shop Flavours</a>
+            <button className="text-cookies-700 underline">Learn more</button>
           </div>
         </div>
 

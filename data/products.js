@@ -2,14 +2,14 @@
 const PRODUCTS = [
   {
     id: 'oat-bliss',
-    name: 'Oat Bliss - Classic Oat Biscuit',
-    short: 'Nutritious oat biscuits, lightly sweetened, crunchy texture.',
+    name: 'Oat Bliss - Classic Oat cookies',
+    short: 'Nutritious oat cookies, lightly sweetened, crunchy texture.',
     price: 199,
     image: '/assets/oat-bliss.png',
     category: 'Oat',
     tags: ['high-fiber','heart-friendly','gut-health'],
     details: {
-      summary: `Oat biscuits made with whole-grain oats and natural sweeteners — a fiber-rich snack for heart & gut health.`,
+      summary: `Oat cookies made with whole-grain oats and natural sweeteners — a fiber-rich snack for heart & gut health.`,
       ingredients: ['Whole-grain oats','Butter','Brown sugar','Baking powder','Salt'],
       nutritionHighlights: [
         'Rich in soluble fiber (beta-glucan)',
@@ -37,7 +37,7 @@ const PRODUCTS = [
   {
     id: 'butter-delight',
     name: 'Butter Delight',
-    short: 'Classic buttery biscuit, melt-in-mouth texture.',
+    short: 'Classic buttery cookies, melt-in-mouth texture.',
     price: 179,
     image: '/assets/butter-delight.png',
     category: 'Classic',

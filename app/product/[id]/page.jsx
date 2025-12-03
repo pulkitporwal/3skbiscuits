@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { MessageCircle, Heart, Star, ChevronRight, Check, Minus, Plus } from 'lucide-react';
+import { MessageCircle, Heart, Star, ChevronRight, Check, Minus, Plus, Instagram, Facebook } from 'lucide-react';
 import { useParams } from 'next/navigation';
 
 const ProductPage = () => {
@@ -11,13 +11,13 @@ const ProductPage = () => {
   // Product data based on the word documents
   const productsData = {
     oats: {
-      name: "Oat Biscuits",
-      price: "199/kg",
+      name: "Oat cookies",
+      price: "199/Box of 200 GMs",
       tagline: "Nutritious snack with high fiber content",
       image: "/products/oats/1.jpeg",
       images: ["/products/oats/1.jpeg"],
-      shortDesc: "Oat biscuits offer benefits like improved heart health, better blood sugar control, and enhanced digestion due to their high fiber content.",
-      
+      shortDesc: "Oat cookies offer benefits like improved heart health, better blood sugar control, and enhanced digestion due to their high fiber content.",
+
       benefits: [
         {
           title: "Rich in Fiber",
@@ -62,8 +62,8 @@ const ProductPage = () => {
     },
 
     coconut: {
-      name: "Coconut Biscuits",
-      price: "199/kg",
+      name: "Coconut cookies",
+      price: "199/Box of 200 GMs",
       tagline: "Healthy fats and fiber for sustained energy",
       image: "/products/coconut/1.jpeg",
       images: ["/products/coconut/1.jpeg", "/products/coconut/2.jpeg"],
@@ -114,7 +114,7 @@ const ProductPage = () => {
 
     namkeen: {
       name: "Namkeen Cookies",
-      price: "199/kg",
+      price: "199/Box of 200 GMs",
       tagline: "Traditional healthy savory snack with digestive benefits",
       image: "/products/namkeen/1.jpeg",
       images: ["/products/namkeen/1.jpeg"],
@@ -164,8 +164,8 @@ const ProductPage = () => {
     },
 
     suji: {
-      name: "Suji Biscuits",
-      price: "199/kg",
+      name: "Suji cookies",
+      price: "199/Box of 200 GMs",
       tagline: "Semolina-based nutrition for sustained energy",
       image: "/products/suji/1.jpeg",
       images: ["/products/suji/1.jpeg"],
@@ -233,7 +233,7 @@ const ProductPage = () => {
               <span className="text-3xl"><img src="/logo.jpeg" alt="3SK Cookies" width={32} height={32} /></span>
               <span className="ml-2 text-2xl font-bold text-[#6B4423]">3SK Cookies</span>
             </div>
-            
+
             <button className="hover:text-[#C17A3F] transition">
               <Heart className="w-5 h-5" />
             </button>
@@ -259,11 +259,10 @@ const ProductPage = () => {
             <button
               key={key}
               onClick={() => setProductType(key)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all ${
-                productType === key
+              className={`px-6 py-3 rounded-full font-semibold transition-all ${productType === key
                   ? 'bg-[#C17A3F] text-white shadow-lg'
                   : 'bg-white text-[#6B4423] border-2 border-[#D4A574] hover:border-[#C17A3F]'
-              }`}
+                }`}
             >
               {productsData[key].name}
             </button>
@@ -281,17 +280,16 @@ const ProductPage = () => {
                 <img src={product.images[selectedImage]} />
               </div>
             </div>
-            
+
             <div className="flex gap-4">
               {product.images.map((img, idx) => (
                 <button
                   key={idx}
                   onClick={() => setSelectedImage(idx)}
-                  className={`w-20 h-20 rounded-2xl flex items-center justify-center text-4xl transition-all ${
-                    selectedImage === idx
+                  className={`w-20 h-20 rounded-2xl flex items-center justify-center text-4xl transition-all ${selectedImage === idx
                       ? 'bg-[#C17A3F] scale-110 shadow-lg'
                       : 'bg-[#EFE0C7] hover:bg-[#D4A574]'
-                  }`}
+                    }`}
                 >
                   <img src={img} alt="" />
                 </button>
@@ -329,7 +327,7 @@ const ProductPage = () => {
               <div className="grid grid-cols-1 gap-3">
                 {product.keyPoints.map((point, idx) => (
                   <div key={idx} className="flex items-start space-x-3">
-                    <Check className="w-5 h-5 text-[#C17A3F] flex-shrink-0 mt-1" />
+                    <Check className="w-5 h-5 text-[#C17A3F] shrink-0 mt-1" />
                     <span className="text-[#8B7355]">{point}</span>
                   </div>
                 ))}
@@ -413,9 +411,71 @@ const ProductPage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#3E2A1D] text-white py-12 mt-20">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <p>© 2024 3SK Cookies. Made with ❤️ and premium ingredients</p>
+      <footer className="bg-[#3E2A1D]">
+        <div className="max-w-7xl mx-auto px-6 py-16">
+          {/* Main Grid */}
+          <div className="grid md:grid-cols-3 gap-12 mb-12">
+            {/* Brand & Social */}
+            <div>
+              <div className="mb-6">
+                <p className="text-5xl mb-3">🍪</p>
+                <h3 className="text-xl font-semibold text-neutral-200">3SK Cookies</h3>
+                <p className="text-sm text-[#B8956A] mt-2">Baked with love</p>
+                <p className="text-xs text-[#D4A574]">Since 2023</p>
+              </div>
+
+              {/* Social Icons */}
+              <div className="mt-8">
+                <p className="text-xs font-semibold text-neutral-300 uppercase tracking-widest mb-4">Follow Us</p>
+                <div className="flex gap-3">
+                  <button className="w-10 h-10 rounded-full bg-[#C17A3F] hover:bg-[#D4A574] text-white transition-all duration-300 flex items-center justify-center">
+                    <Instagram size={18} />
+                  </button>
+                  <button className="w-10 h-10 rounded-full bg-[#C17A3F] hover:bg-[#D4A574] text-white transition-all duration-300 flex items-center justify-center">
+                    <Facebook size={18} />
+                  </button>
+                  <button className="w-10 h-10 rounded-full bg-[#C17A3F] hover:bg-[#D4A574] text-white transition-all duration-300 flex items-center justify-center">
+                    <MessageCircle size={18} />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Shop */}
+            <div>
+              <h4 className="text-sm font-semibold text-neutral-200 mb-6 uppercase tracking-widest">Shop</h4>
+              <ul className="space-y-3">
+                {['Oats Cookies', 'Namkeen Cookies', 'Chocolate Delights', 'Gift Boxes'].map((item, i) => (
+                  <li key={i}>
+                    <a href="#" className="text-[#B8956A] hover:text-[#C17A3F] transition-colors text-sm">
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Company */}
+            <div>
+              <h4 className="text-sm font-semibold text-neutral-200 mb-6 uppercase tracking-widest">Company</h4>
+              <ul className="space-y-3">
+                <li>
+                  <a href="/about" className="text-[#B8956A] hover:text-[#C17A3F] transition-colors text-sm">
+                    About Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="h-px bg-linear-to-r from-transparent via-[#D4A574] to-transparent mb-8"></div>
+
+          {/* Bottom */}
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between text-sm text-[#B8956A]">
+            <p>© 2024 3SK Cookies. All rights reserved.</p>
+            <p className="mt-4 md:mt-0">Handcrafted with ❤️ in India</p>
+          </div>
         </div>
       </footer>
     </div>

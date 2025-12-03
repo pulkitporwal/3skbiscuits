@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { ShoppingCart, Menu, X, Heart, Star, Check, ChevronDown, ChevronRight } from 'lucide-react';
+import { ShoppingCart, Menu, X, Heart, Star, Check, ChevronDown, ChevronRight, Instagram, Facebook, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 
 // Mock GSAP functionality since we can't import external libraries
@@ -11,26 +11,26 @@ const gsap = {
     from: () => ({ from: () => ({}) }),
     fromTo: () => ({ fromTo: () => ({}) })
   }),
-  to: () => {},
-  from: () => {},
-  fromTo: () => {}
+  to: () => { },
+  from: () => { },
+  fromTo: () => { }
 };
 
 const products = [
   {
     id: "oats",
-    name: "Oat Biscuits",
+    name: "Oat cookies",
     tagline: "Nutritious snack with high fiber content",
-    price: "199/kg",
+    price: "199/Box of 200 GMs",
     category: "Healthy",
     tags: ["Bestseller", "Heart-Healthy", "High Fiber"],
     image: "/products/oats/1.jpeg"
   },
   {
     id: "coconut",
-    name: "Coconut Biscuits",
+    name: "Coconut cookies",
     tagline: "Healthy fats and fiber for sustained energy",
-    price: "199/kg",
+    price: "199/Box of 200 GMs",
     category: "Healthy",
     tags: ["Popular", "Energy Boost", "Immunity"],
     image: "/products/coconut/1.jpeg"
@@ -39,23 +39,23 @@ const products = [
     id: "namkeen",
     name: "Namkeen Cookies",
     tagline: "Traditional healthy savory snack with digestive benefits",
-    price: "199/kg",
+    price: "199/Box of 200 GMs",
     category: "Savory",
     tags: ["Digestive Health", "No Maida", "Traditional"],
     image: "/products/namkeen/1.jpeg"
   },
   {
     id: "suji",
-    name: "Suji Biscuits",
+    name: "Suji cookies",
     tagline: "Semolina-based nutrition for sustained energy",
-    price: "199/kg",
+    price: "199/Box of 200 GMs",
     category: "Healthy",
     tags: ["Weight Management", "Heart-Healthy", "Nutrient-Rich"],
     image: "/products/suji/1.jpeg"
   }
 ];
 
-const BiscuitWebsite = () => {
+const cookiesWebsite = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState("All");
   const [cartCount, setCartCount] = useState(0);
@@ -74,8 +74,14 @@ const BiscuitWebsite = () => {
     }
   }, []);
 
-  const filteredProducts = activeCategory === "All" 
-    ? products 
+  const handleWhatsAppClick = () => {
+    const message = `Hi! I'm interested in your products. Can you provide more details and availability?`;
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/917296937881?text=${encodedMessage}`, "_blank");
+  };
+
+  const filteredProducts = activeCategory === "All"
+    ? products
     : products.filter(p => p.category === activeCategory);
 
   return (
@@ -88,12 +94,10 @@ const BiscuitWebsite = () => {
               <Image src="/logo.jpeg" alt="3SK Cookies logo" width={32} height={32} />
               <span className="ml-2 text-2xl font-bold text-[#6B4423]">3SK Cookies</span>
             </div>
-            
+
             <nav className="hidden md:flex space-x-8">
               <a href="#shop" className="hover:text-[#C17A3F] transition">Shop</a>
-              <a href="#oats" className="hover:text-[#C17A3F] transition">Oat Collection</a>
-              <a href="#story" className="hover:text-[#C17A3F] transition">Our Story</a>
-              <a href="#contact" className="hover:text-[#C17A3F] transition">Contact</a>
+              <a href="/about" className="hover:text-[#C17A3F] transition">About</a>
             </nav>
 
             <div className="flex items-center space-x-4">
@@ -108,7 +112,7 @@ const BiscuitWebsite = () => {
                   </span>
                 )}
               </button>
-              <button 
+              <button
                 className="md:hidden"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
@@ -122,7 +126,7 @@ const BiscuitWebsite = () => {
       {/* Hero Section */}
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-b from-[#EFE0C7] to-[#F5EBD9]">
         {/* Floating Cookies */}
-        <div className="absolute inset-0 pointer-events-none">
+        {/* <div className="absolute inset-0 pointer-events-none">
           {[
             { left: '10%', top: '20%', duration: 3.5 },
             { left: '25%', top: '70%', duration: 4.2 },
@@ -144,7 +148,7 @@ const BiscuitWebsite = () => {
               🍪
             </div>
           ))}
-        </div>
+        </div> */}
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <div className="mb-8">
@@ -155,9 +159,9 @@ const BiscuitWebsite = () => {
               Crafted with Care
             </h1>
           </div>
-          
+
           <p className="text-xl md:text-2xl text-[#8B7355] mb-8 animate-fade-in-up animation-delay-400">
-            Discover biscuits that bring warmth to every moment
+            Discover cookies that bring warmth to every moment
           </p>
 
           <div className="flex flex-wrap justify-center gap-6 mb-10 animate-fade-in-up animation-delay-600">
@@ -177,8 +181,9 @@ const BiscuitWebsite = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-800">
             <a href="#shop" className="bg-[#C17A3F] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#6B4423] transform hover:scale-105 transition-all shadow-lg">
-              Explore Our Biscuits
+              Explore Our cookies
             </a>
+
             <button className="border-2 border-[#C17A3F] text-[#C17A3F] px-8 py-4 rounded-full font-semibold hover:bg-[#C17A3F] hover:text-white transition-all">
               Learn Our Story →
             </button>
@@ -190,20 +195,17 @@ const BiscuitWebsite = () => {
               <div className="text-sm text-[#8B7355]">Happy Customers</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-[#C17A3F]">50+</div>
+              <div className="text-3xl font-bold text-[#C17A3F]">4</div>
               <div className="text-sm text-[#8B7355]">Varieties</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-[#C17A3F]">Since 2010</div>
+              <div className="text-3xl font-bold text-[#C17A3F]">Since 2023</div>
               <div className="text-sm text-[#8B7355]">Baking Excellence</div>
             </div>
           </div>
         </div>
 
-        {/* Mascot */}
-        <div className="absolute bottom-10 right-10 text-8xl animate-bounce hidden lg:block">
-          👨‍🍳
-        </div>
+
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
@@ -217,19 +219,19 @@ const BiscuitWebsite = () => {
           <div className="relative">
             <div className="bg-[#D4A574] rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform">
               <div className="aspect-square flex items-center justify-center text-9xl">
-                🥖
+                <img src={"/cookie.jpg"} />
               </div>
             </div>
             <div className="absolute -top-4 -left-4 text-6xl">🌾</div>
             <div className="absolute -bottom-4 -right-4 text-6xl">🌾</div>
           </div>
-          
+
           <div>
             <h2 className="text-4xl font-bold text-[#6B4423] mb-6">
-              Every Biscuit Tells a Story
+              Every cookies Tells a Story
             </h2>
             <p className="text-lg text-[#8B7355] mb-4">
-              Since 2010, we&apos;ve been crafting biscuits with passion and precision. Our journey began in a small bakery with a simple belief: that the best biscuits come from the finest ingredients and a whole lot of love.
+              Since 2023, we&apos;ve been crafting cookies with passion and precision. Our journey began in a small bakery with a simple belief: that the best cookies come from the finest ingredients and a whole lot of love.
             </p>
             <p className="text-lg text-[#8B7355] mb-6">
               Today, we continue that tradition, baking each batch with the same care and attention that started it all.
@@ -261,11 +263,10 @@ const BiscuitWebsite = () => {
               { icon: "📦", title: "Fresh Packaging", desc: "Sealed at peak freshness to lock in flavor" },
               { icon: "❤️", title: "Delivered to You", desc: "From our kitchen to your table with care" }
             ].map((step, index) => (
-              <div 
+              <div
                 key={index}
-                className={`flex flex-col md:flex-row items-center gap-8 ${
-                  index % 2 === 1 ? 'md:flex-row-reverse' : ''
-                }`}
+                className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''
+                  }`}
               >
                 <div className="flex-1 text-center md:text-left">
                   <div className="inline-flex items-center justify-center w-20 h-20 bg-[#C17A3F] rounded-full text-4xl mb-4 transform hover:rotate-12 transition-transform">
@@ -310,7 +311,7 @@ const BiscuitWebsite = () => {
               { icon: "⚖️", title: "Weight Management", desc: "Fiber promotes natural satiety" },
               { icon: "✨", title: "Skin & Beauty", desc: "Anti-inflammatory properties" }
             ].map((benefit, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all"
               >
@@ -342,7 +343,7 @@ const BiscuitWebsite = () => {
                     <span className="text-[#C17A3F]">{nutrient.value}</span>
                   </div>
                   <div className="h-3 bg-[#EFE0C7] rounded-full overflow-hidden">
-                    <div 
+                    <div
                       className="h-full bg-[#C17A3F] rounded-full transition-all duration-1000"
                       style={{ width: `${nutrient.percent}%` }}
                     ></div>
@@ -359,7 +360,7 @@ const BiscuitWebsite = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-5xl font-bold text-[#6B4423] mb-4">
-              Our Biscuit Collection
+              Our cookies Collection
             </h2>
             <p className="text-xl text-[#8B7355]">
               Handcrafted varieties for every craving
@@ -372,11 +373,10 @@ const BiscuitWebsite = () => {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all ${
-                  activeCategory === category
-                    ? 'bg-[#C17A3F] text-white shadow-lg'
-                    : 'bg-white text-[#6B4423] hover:bg-[#EFE0C7]'
-                }`}
+                className={`px-6 py-3 rounded-full font-semibold transition-all ${activeCategory === category
+                  ? 'bg-[#C17A3F] text-white shadow-lg'
+                  : 'bg-white text-[#6B4423] hover:bg-[#EFE0C7]'
+                  }`}
               >
                 {category}
               </button>
@@ -386,14 +386,14 @@ const BiscuitWebsite = () => {
           {/* Product Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProducts.map((product, index) => (
-              <div 
+              <div
                 key={product.id}
                 className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative bg-[#EFE0C7] p-12 flex items-center justify-center">
                   <div className="text-8xl group-hover:scale-110 transition-transform">
-                    <img src={product.image} alt={product.name} className='max-h-[400px]'  />
+                    <img src={product.image} alt={product.name} className='max-h-[400px]' />
                   </div>
                   {product.tags.includes("Bestseller") && (
                     <div className="absolute top-4 right-4 bg-[#C17A3F] text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -401,7 +401,7 @@ const BiscuitWebsite = () => {
                     </div>
                   )}
                 </div>
-                
+
                 <div className="p-6">
                   <h3 className="text-2xl font-bold text-[#6B4423] mb-2">
                     {product.name}
@@ -409,7 +409,7 @@ const BiscuitWebsite = () => {
                   <p className="text-[#8B7355] mb-4">
                     {product.tagline}
                   </p>
-                  
+
                   <div className="flex items-center mb-4">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-[#C17A3F] text-[#C17A3F]" />
@@ -480,79 +480,71 @@ const BiscuitWebsite = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#3E2A1D] text-white py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          {/* Newsletter */}
-          {/* <div className="text-center mb-12 pb-12 border-b border-[#6B4423]">
-            <h3 className="text-2xl font-bold mb-4">Get Fresh Updates & Exclusive Offers</h3>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <input 
-                type="email" 
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-full text-[#3E2A1D] focus:outline-none focus:ring-2 focus:ring-[#C17A3F]"
-              />
-              <button className="bg-[#C17A3F] px-6 py-3 rounded-full font-semibold hover:bg-[#D4A574] transition-colors">
-                Subscribe
-              </button>
-            </div>
-            <p className="text-sm text-[#B8956A] mt-2">10% off first order • Early access to new flavors</p>
-          </div> */}
-
-          {/* Footer Columns */}
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
+      <footer className="bg-[#3E2A1D]">
+        <div className="max-w-7xl mx-auto px-6 py-16">
+          {/* Main Grid */}
+          <div className="grid md:grid-cols-3 gap-12 mb-12">
+            {/* Brand & Social */}
             <div>
-              <div className="flex items-center mb-4">
-                <span className="text-3xl">🍪</span>
-                <span className="ml-2 text-xl font-bold">3SK Biscuits</span>
+              <div className="mb-6">
+                <p className="text-5xl mb-3">🍪</p>
+                <h3 className="text-xl font-semibold text-neutral-200">3SK Cookies</h3>
+                <p className="text-sm text-[#B8956A] mt-2">Baked with love</p>
+                <p className="text-xs text-[#D4A574]">Since 2023</p>
               </div>
-              <p className="text-[#B8956A] mb-4">Baked with love since 2010</p>
-              <div className="flex space-x-4">
-                <button className="hover:text-[#C17A3F] transition">📷</button>
-                <button className="hover:text-[#C17A3F] transition">📘</button>
-                <button className="hover:text-[#C17A3F] transition">📌</button>
+
+              {/* Social Icons */}
+              <div className="mt-8">
+                <p className="text-xs font-semibold text-neutral-300 uppercase tracking-widest mb-4">Follow Us</p>
+                <div className="flex gap-3">
+                  <button className="w-10 h-10 rounded-full bg-[#C17A3F] hover:bg-[#D4A574] text-white transition-all duration-300 flex items-center justify-center">
+                    <Instagram size={18} />
+                  </button>
+                  <button className="w-10 h-10 rounded-full bg-[#C17A3F] hover:bg-[#D4A574] text-white transition-all duration-300 flex items-center justify-center">
+                    <Facebook size={18} />
+                  </button>
+                  <button className="w-10 h-10 rounded-full bg-[#C17A3F] hover:bg-[#D4A574] text-white transition-all duration-300 flex items-center justify-center">
+                    <MessageCircle size={18} />
+                  </button>
+                </div>
               </div>
             </div>
 
+            {/* Shop */}
             <div>
-              <h4 className="font-bold mb-4">Shop</h4>
-              <ul className="space-y-2 text-[#B8956A]">
-                <li><a href="#" className="hover:text-white transition">All Products</a></li>
-                <li><a href="#" className="hover:text-white transition">Bestsellers</a></li>
-                <li><a href="#" className="hover:text-white transition">Oat Collection</a></li>
-                <li><a href="#" className="hover:text-white transition">Gift Boxes</a></li>
+              <h4 className="text-sm font-semibold text-neutral-200 mb-6 uppercase tracking-widest">Shop</h4>
+              <ul className="space-y-3">
+                {['Oats Cookies', 'Namkeen Cookies', 'Chocolate Delights', 'Gift Boxes'].map((item, i) => (
+                  <li key={i}>
+                    <a href="#" className="text-[#B8956A] hover:text-[#C17A3F] transition-colors text-sm">
+                      {item}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
+            {/* Company */}
             <div>
-              <h4 className="font-bold mb-4">Company</h4>
-              <ul className="space-y-2 text-[#B8956A]">
-                <li><a href="#" className="hover:text-white transition">Our Story</a></li>
-                <li><a href="#" className="hover:text-white transition">Contact Us</a></li>
-                <li><a href="#" className="hover:text-white transition">Wholesale</a></li>
-                <li><a href="#" className="hover:text-white transition">Careers</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold mb-4">Support</h4>
-              <ul className="space-y-2 text-[#B8956A]">
-                <li><a href="#" className="hover:text-white transition">FAQs</a></li>
-                <li><a href="#" className="hover:text-white transition">Shipping Info</a></li>
-                <li><a href="#" className="hover:text-white transition">Returns</a></li>
-                <li><a href="#" className="hover:text-white transition">Privacy Policy</a></li>
+              <h4 className="text-sm font-semibold text-neutral-200 mb-6 uppercase tracking-widest">Company</h4>
+              <ul className="space-y-3">
+                <li>
+                  <a href="/about" className="text-[#B8956A] hover:text-[#C17A3F] transition-colors text-sm">
+                    About Us
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
 
-          {/* Bottom Bar */}
-          <div className="pt-8 border-t border-[#6B4423] text-center text-[#B8956A]">
-            <p>© {new Date().getFullYear()} 3SK Cookies — All rights reserved.</p>
-          </div>
-        </div>
+          {/* Divider */}
+          <div className="h-px bg-linear-to-r from-transparent via-[#D4A574] to-transparent mb-8"></div>
 
-        {/* Mascot Waving */}
-        <div className="fixed bottom-8 right-8 text-6xl animate-wave hidden lg:block">
-          👨‍🍳
+          {/* Bottom */}
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between text-sm text-[#B8956A]">
+            <p>© 2024 3SK Cookies. All rights reserved.</p>
+            <p className="mt-4 md:mt-0">Handcrafted with ❤️ in India</p>
+          </div>
         </div>
       </footer>
 
@@ -616,4 +608,4 @@ const BiscuitWebsite = () => {
   );
 };
 
-export default BiscuitWebsite;  
+export default cookiesWebsite;  

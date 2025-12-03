@@ -37,7 +37,7 @@ export default function Products() {
         <div className="flex justify-between items-center">
           <h2 className="text-2xl font-bold text-chocolate">Our Flavours</h2>
           <div className="flex gap-3">
-            <button className="px-3 py-1 rounded-full bg-biscuit-100">All</button>
+            <button className="px-3 py-1 rounded-full bg-cookies-100">All</button>
             <button className="px-3 py-1 rounded-full">Oat</button>
             <button className="px-3 py-1 rounded-full">Chocolate</button>
           </div>
@@ -50,10 +50,10 @@ export default function Products() {
                 <Image src={p.image} alt={p.name} fill style={{ objectFit: 'contain' }} />
               </div>
               <h3 className="mt-4 font-semibold text-chocolate">{p.name}</h3>
-              <p className="mt-2 text-sm text-biscuit-700">{p.short}</p>
+              <p className="mt-2 text-sm text-cookies-700">{p.short}</p>
               <div className="mt-4 flex items-center justify-between">
                 <span className="font-bold">₹{p.price}</span>
-                <a className="text-sm px-3 py-1 rounded-md bg-biscuit-500 text-white">View</a>
+                <a className="text-sm px-3 py-1 rounded-md bg-cookies-500 text-white">View</a>
               </div>
             </article>
           ))}

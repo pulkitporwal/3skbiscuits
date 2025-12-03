@@ -27,16 +27,16 @@ export default function ProductDetail({ id }) {
 
         <div>
           <h1 className="text-3xl font-bold text-chocolate fade-in">{prod.name}</h1>
-          <p className="mt-3 text-biscuit-700 fade-in">{prod.details?.summary}</p>
+          <p className="mt-3 text-cookies-700 fade-in">{prod.details?.summary}</p>
 
           <div className="mt-6 grid grid-cols-2 gap-4">
-            <div className="bg-biscuit-50 p-4 rounded-lg fade-in">
+            <div className="bg-cookies-50 p-4 rounded-lg fade-in">
               <h4 className="font-semibold">Key benefits</h4>
               <ul className="mt-2 text-sm">
                 {prod.details?.benefits.map((b) => <li key={b}>• {b}</li>)}
               </ul>
             </div>
-            <div className="bg-biscuit-50 p-4 rounded-lg fade-in">
+            <div className="bg-cookies-50 p-4 rounded-lg fade-in">
               <h4 className="font-semibold">Nutrition highlights</h4>
               <ul className="mt-2 text-sm">
                 {prod.details?.nutritionHighlights.map((n) => <li key={n}>• {n}</li>)}
@@ -46,11 +46,11 @@ export default function ProductDetail({ id }) {
 
           <div className="mt-6 flex items-center gap-4 fade-in">
             <span className="text-2xl font-bold">₹{prod.price}</span>
-            <button className="px-5 py-2 bg-biscuit-500 text-white rounded-lg">Add to cart</button>
+            <button className="px-5 py-2 bg-cookies-500 text-white rounded-lg">Add to cart</button>
             <button className="px-4 py-2 border rounded-lg">Subscribe & Save</button>
           </div>
 
-          <div className="mt-6 text-xs text-biscuit-700 fade-in">
+          <div className="mt-6 text-xs text-cookies-700 fade-in">
             <strong>Note:</strong> Oats may support heart health, blood sugar control and digestion.
           </div>
         </div>

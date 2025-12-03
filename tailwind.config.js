@@ -2,7 +2,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        biscuit: {
+        cookies: {
           50: '#F5E9DF',
           100: '#EBDCC9',
           300: '#D9A066',

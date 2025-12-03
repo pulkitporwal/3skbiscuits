@@ -33,17 +33,17 @@ export default function Process() {
   });
 
   return (
-    <section ref={root} className="py-20 bg-biscuit-50">
+    <section ref={root} className="py-20 bg-cookies-50">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold text-chocolate">How we craft our biscuits</h2>
-        <p className="mt-2 text-biscuit-700 max-w-2xl mx-auto">Simple process, real ingredients, full of love.</p>
+        <h2 className="text-3xl font-bold text-chocolate">How we craft our cookies</h2>
+        <p className="mt-2 text-cookies-700 max-w-2xl mx-auto">Simple process, real ingredients, full of love.</p>
 
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {steps.map((s, i) => (
             <div key={s.title} className="step-card bg-white p-6 rounded-2xl shadow-md">
               <div className="text-4xl">{s.icon}</div>
               <h3 className="mt-4 font-semibold text-lg text-chocolate">{s.title}</h3>
-              <p className="mt-2 text-biscuit-700 text-sm">{s.desc}</p>
+              <p className="mt-2 text-cookies-700 text-sm">{s.desc}</p>
             </div>
           ))}
         </div>
