@@ -497,15 +497,15 @@ const cookiesWebsite = () => {
               <div className="mt-8">
                 <p className="text-xs font-semibold text-neutral-300 uppercase tracking-widest mb-4">Follow Us</p>
                 <div className="flex gap-3">
-                  <button className="w-10 h-10 rounded-full bg-[#C17A3F] hover:bg-[#D4A574] text-white transition-all duration-300 flex items-center justify-center">
+                  <Link href={"https://www.instagram.com/3sk_cookies"} className="w-10 h-10 rounded-full bg-[#C17A3F] hover:bg-[#D4A574] text-white transition-all duration-300 flex items-center justify-center">
                     <Instagram size={18} />
-                  </button>
-                  <button className="w-10 h-10 rounded-full bg-[#C17A3F] hover:bg-[#D4A574] text-white transition-all duration-300 flex items-center justify-center">
+                  </Link>
+                  <Link href="https://www.facebook.com/profile.php?id=61582067559023" className="w-10 h-10 rounded-full bg-[#C17A3F] hover:bg-[#D4A574] text-white transition-all duration-300 flex items-center justify-center">
                     <Facebook size={18} />
-                  </button>
-                  <button className="w-10 h-10 rounded-full bg-[#C17A3F] hover:bg-[#D4A574] text-white transition-all duration-300 flex items-center justify-center">
+                  </Link>
+                  <Link href={"https://wa.me/917296937881?text='Hi! I'm interested in your products. Can you provide more details and availability?'"} className="w-10 h-10 rounded-full bg-[#C17A3F] hover:bg-[#D4A574] text-white transition-all duration-300 flex items-center justify-center">
                     <MessageCircle size={18} />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

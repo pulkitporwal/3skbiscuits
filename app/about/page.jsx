@@ -282,73 +282,73 @@ const AboutPage = () => {
             </section>
 
             {/* Footer */}
-            <footer className="bg-[#3E2A1D]">
-                <div className="max-w-7xl mx-auto px-6 py-16">
-                    {/* Main Grid */}
-                    <div className="grid md:grid-cols-3 gap-12 mb-12">
-                        {/* Brand & Social */}
-                        <div>
-                            <div className="mb-6">
-                                <p className="text-5xl mb-3">🍪</p>
-                                <h3 className="text-xl font-semibold text-neutral-200">3SK Cookies</h3>
-                                <p className="text-sm text-[#B8956A] mt-2">Baked with love</p>
-                                <p className="text-xs text-[#D4A574]">Since 2023</p>
-                            </div>
+      <footer className="bg-[#3E2A1D]">
+        <div className="max-w-7xl mx-auto px-6 py-16">
+          {/* Main Grid */}
+          <div className="grid md:grid-cols-3 gap-12 mb-12">
+            {/* Brand & Social */}
+            <div>
+              <div className="mb-6">
+                <p className="text-5xl mb-3">🍪</p>
+                <h3 className="text-xl font-semibold text-neutral-200">3SK Cookies</h3>
+                <p className="text-sm text-[#B8956A] mt-2">Baked with love</p>
+                <p className="text-xs text-[#D4A574]">Since 2023</p>
+              </div>
 
-                            {/* Social Icons */}
-                            <div className="mt-8">
-                                <p className="text-xs font-semibold text-neutral-300 uppercase tracking-widest mb-4">Follow Us</p>
-                                <div className="flex gap-3">
-                                    <button className="w-10 h-10 rounded-full bg-[#C17A3F] hover:bg-[#D4A574] text-white transition-all duration-300 flex items-center justify-center">
-                                        <Instagram size={18} />
-                                    </button>
-                                    <button className="w-10 h-10 rounded-full bg-[#C17A3F] hover:bg-[#D4A574] text-white transition-all duration-300 flex items-center justify-center">
-                                        <Facebook size={18} />
-                                    </button>
-                                    <button className="w-10 h-10 rounded-full bg-[#C17A3F] hover:bg-[#D4A574] text-white transition-all duration-300 flex items-center justify-center">
-                                        <MessageCircle size={18} />
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Shop */}
-                        <div>
-                            <h4 className="text-sm font-semibold text-neutral-200 mb-6 uppercase tracking-widest">Shop</h4>
-                            <ul className="space-y-3">
-                                {['Oats Cookies', 'Namkeen Cookies', 'Chocolate Delights', 'Gift Boxes'].map((item, i) => (
-                                    <li key={i}>
-                                        <a href="#" className="text-[#B8956A] hover:text-[#C17A3F] transition-colors text-sm">
-                                            {item}
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        {/* Company */}
-                        <div>
-                            <h4 className="text-sm font-semibold text-neutral-200 mb-6 uppercase tracking-widest">Company</h4>
-                            <ul className="space-y-3">
-                                <li>
-                                    <a href="/about" className="text-[#B8956A] hover:text-[#C17A3F] transition-colors text-sm">
-                                        About Us
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    {/* Divider */}
-                    <div className="h-px bg-linear-to-r from-transparent via-[#D4A574] to-transparent mb-8"></div>
-
-                    {/* Bottom */}
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between text-sm text-[#B8956A]">
-                        <p>© 2024 3SK Cookies. All rights reserved.</p>
-                        <p className="mt-4 md:mt-0">Handcrafted with ❤️ in India</p>
-                    </div>
+              {/* Social Icons */}
+              <div className="mt-8">
+                <p className="text-xs font-semibold text-neutral-300 uppercase tracking-widest mb-4">Follow Us</p>
+                <div className="flex gap-3">
+                  <Link href={"https://www.instagram.com/3sk_cookies"} className="w-10 h-10 rounded-full bg-[#C17A3F] hover:bg-[#D4A574] text-white transition-all duration-300 flex items-center justify-center">
+                    <Instagram size={18} />
+                  </Link>
+                  <Link href="https://www.facebook.com/profile.php?id=61582067559023" className="w-10 h-10 rounded-full bg-[#C17A3F] hover:bg-[#D4A574] text-white transition-all duration-300 flex items-center justify-center">
+                    <Facebook size={18} />
+                  </Link>
+                  <Link href={"https://wa.me/917296937881?text='Hi! I'm interested in your products. Can you provide more details and availability?'"} className="w-10 h-10 rounded-full bg-[#C17A3F] hover:bg-[#D4A574] text-white transition-all duration-300 flex items-center justify-center">
+                    <MessageCircle size={18} />
+                  </Link>
                 </div>
-            </footer>
+              </div>
+            </div>
+
+            {/* Shop */}
+            <div>
+              <h4 className="text-sm font-semibold text-neutral-200 mb-6 uppercase tracking-widest">Shop</h4>
+              <ul className="space-y-3">
+                {['Oats Cookies', 'Namkeen Cookies', 'Chocolate Delights', 'Gift Boxes'].map((item, i) => (
+                  <li key={i}>
+                    <a href="#" className="text-[#B8956A] hover:text-[#C17A3F] transition-colors text-sm">
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Company */}
+            <div>
+              <h4 className="text-sm font-semibold text-neutral-200 mb-6 uppercase tracking-widest">Company</h4>
+              <ul className="space-y-3">
+                <li>
+                  <a href="/about" className="text-[#B8956A] hover:text-[#C17A3F] transition-colors text-sm">
+                    About Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="h-px bg-linear-to-r from-transparent via-[#D4A574] to-transparent mb-8"></div>
+
+          {/* Bottom */}
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between text-sm text-[#B8956A]">
+            <p>© 2024 3SK Cookies. All rights reserved.</p>
+            <p className="mt-4 md:mt-0">Handcrafted with ❤️ in India</p>
+          </div>
+        </div>
+      </footer>
 
             <style jsx>{`
         @keyframes fade-in-up {
