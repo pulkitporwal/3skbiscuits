@@ -261,8 +261,8 @@ const ProductPage = () => {
               key={key}
               onClick={() => setProductType(key)}
               className={`px-6 py-3 rounded-full font-semibold transition-all ${productType === key
-                  ? 'bg-[#C17A3F] text-white shadow-lg'
-                  : 'bg-white text-[#6B4423] border-2 border-[#D4A574] hover:border-[#C17A3F]'
+                ? 'bg-[#C17A3F] text-white shadow-lg'
+                : 'bg-white text-[#6B4423] border-2 border-[#D4A574] hover:border-[#C17A3F]'
                 }`}
             >
               {productsData[key].name}
@@ -288,8 +288,8 @@ const ProductPage = () => {
                   key={idx}
                   onClick={() => setSelectedImage(idx)}
                   className={`w-20 h-20 rounded-2xl flex items-center justify-center text-4xl transition-all ${selectedImage === idx
-                      ? 'bg-[#C17A3F] scale-110 shadow-lg'
-                      : 'bg-[#EFE0C7] hover:bg-[#D4A574]'
+                    ? 'bg-[#C17A3F] scale-110 shadow-lg'
+                    : 'bg-[#EFE0C7] hover:bg-[#D4A574]'
                     }`}
                 >
                   <img src={img} alt="" />
@@ -412,7 +412,7 @@ const ProductPage = () => {
       </section>
 
       {/* Footer */}
-       <footer className="bg-[#3E2A1D]">
+      <footer className="bg-[#3E2A1D]">
         <div className="max-w-7xl mx-auto px-6 py-16">
           {/* Main Grid */}
           <div className="grid md:grid-cols-3 gap-12 mb-12">
@@ -445,14 +445,12 @@ const ProductPage = () => {
             {/* Shop */}
             <div>
               <h4 className="text-sm font-semibold text-neutral-200 mb-6 uppercase tracking-widest">Shop</h4>
-              <ul className="space-y-3">
-                {['Oats Cookies', 'Namkeen Cookies', 'Chocolate Delights', 'Gift Boxes'].map((item, i) => (
-                  <li key={i}>
-                    <a href="#" className="text-[#B8956A] hover:text-[#C17A3F] transition-colors text-sm">
-                      {item}
-                    </a>
-                  </li>
-                ))}
+
+              <ul className="space-y-2 text-[#B8956A]">
+                <Link href={"/product/oats"}><li>Oats Cookies</li></Link>
+                <Link href={"/product/namkeen"}><li>Namkeen Cookies</li></Link>
+                <Link href={"/product/suji"}><li>Gift Boxes</li></Link>
+                <Link href={"/product/coconut"}><li>Gift Boxes</li></Link>
               </ul>
             </div>
 

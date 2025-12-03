@@ -425,7 +425,7 @@ const cookiesWebsite = () => {
                       href={`/product/${product.id}`}
                       className="bg-[#C17A3F] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#6B4423] transition-colors"
                     >
-                      View Product
+                      View 
                     </Link>
                   </div>
 
@@ -513,15 +513,14 @@ const cookiesWebsite = () => {
             {/* Shop */}
             <div>
               <h4 className="text-sm font-semibold text-neutral-200 mb-6 uppercase tracking-widest">Shop</h4>
-              <ul className="space-y-3">
-                {['Oats Cookies', 'Namkeen Cookies', 'Chocolate Delights', 'Gift Boxes'].map((item, i) => (
-                  <li key={i}>
-                    <a href="#" className="text-[#B8956A] hover:text-[#C17A3F] transition-colors text-sm">
-                      {item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <div>
+                <ul className="space-y-2 text-[#B8956A]">
+                  <Link href={"/product/oats"}><li>Oats Cookies</li></Link>
+                  <Link href={"/product/namkeen"}><li>Namkeen Cookies</li></Link>
+                  <Link href={"/product/suji"}><li>Gift Boxes</li></Link>
+                  <Link href={"/product/coconut"}><li>Gift Boxes</li></Link>
+                </ul>
+              </div>
             </div>
 
             {/* Company */}
