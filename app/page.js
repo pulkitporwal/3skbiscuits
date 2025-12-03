@@ -267,7 +267,7 @@ const cookiesWebsite = () => {
             </p>
             <div className="flex items-center space-x-4">
               <div className="w-20 h-1 bg-[#C17A3F]"></div>
-              <span className="text-[#C17A3F] font-semibold">Founded 2010</span>
+              <span className="text-[#C17A3F] font-semibold">Founded 2023</span>
             </div>
           </div>
         </div>
