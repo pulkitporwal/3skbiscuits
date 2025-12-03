@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import WhatsappButton from "../components/whatsapp-button";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,6 +25,7 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <body
@@ -31,6 +33,7 @@ export default function RootLayout({ children }) {
         cz-shortcut-listen="true"
       >
         {children}
+        <WhatsappButton />
       </body>
     </html>
   );
