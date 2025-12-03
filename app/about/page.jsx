@@ -62,9 +62,9 @@ const AboutPage = () => {
                   </button>
                   <button className="relative hover:text-[#C17A3F] transition">
                     <ShoppingCart className="w-5 h-5" />
-                    {cartCount > 0 && (
+                    {0 > 0 && (
                       <span className="absolute -top-2 -right-2 bg-[#C17A3F] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                        {cartCount}
+                        {/* {cartCount} */}
                       </span>
                     )}
                   </button>

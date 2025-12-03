@@ -243,27 +243,24 @@ const ProductPage = () => {
       </nav>
 
       <div className="flex items-center space-x-4">
-        <button className="hover:text-[#C17A3F] transition">
-          <Heart className="w-5 h-5" />
-        </button>
-
-        <button className="relative hover:text-[#C17A3F] transition">
-          <ShoppingCart className="w-5 h-5" />
-          {cartCount > 0 && (
-            <span className="absolute -top-2 -right-2 bg-[#C17A3F] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-              {cartCount}
-            </span>
-          )}
-        </button>
-
-        {/* Mobile Toggle Button */}
-        <button
-          className="md:hidden"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X /> : <Menu />}
-        </button>
-      </div>
+                  <button className="hover:text-[#C17A3F] transition">
+                    <Heart className="w-5 h-5" />
+                  </button>
+                  <button className="relative hover:text-[#C17A3F] transition">
+                    <ShoppingCart className="w-5 h-5" />
+                    {0 > 0 && (
+                      <span className="absolute -top-2 -right-2 bg-[#C17A3F] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                        {/* {cartCount} */}
+                      </span>
+                    )}
+                  </button>
+                  <button
+                    className="md:hidden"
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                  >
+                    {mobileMenuOpen ? <X /> : <Menu />}
+                  </button>
+                </div>
     </div>
   </div>
 
