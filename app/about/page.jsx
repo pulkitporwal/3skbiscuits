@@ -111,7 +111,7 @@ const AboutPage = () => {
                                 The Visionary: Kavya Agarwal
                             </h2>
                             <p className="text-lg text-[#8B7355] mb-4">
-                                Welcome to 3SK Cookies. The drive to create truly exceptional biscuits begins with our founder, Kavya Agarwal. As the businessman and visionary behind the brand, Kavya's mission is ambitious: to take the wholesome, comforting flavors of Indian baking and establish them as a cherished global tradition.
+                                Welcome to 3SK Cookies. The drive to create truly exceptional cookies begins with our founder, Kavya Agarwal. As the businessman and visionary behind the brand, Kavya's mission is ambitious: to take the wholesome, comforting flavors of Indian baking and establish them as a cherished global tradition.
                             </p>
                             <p className="text-lg text-[#8B7355] mb-6">
                                 He leads a dedicated team to ensure every product maintains the integrity of traditional Indian taste while meeting the highest standards of international gourmet quality.
@@ -164,7 +164,7 @@ const AboutPage = () => {
                                 Premium Excellence
                             </h3>
                             <p className="text-[#8B7355]">
-                                Deliver truly exceptional biscuits that celebrate pure, comforting flavors rooted in Indian tradition with gourmet refinement.
+                                Deliver truly exceptional cookies that celebrate pure, comforting flavors rooted in Indian tradition with gourmet refinement.
                             </p>
                         </div>
                     </div>
@@ -257,7 +257,7 @@ const AboutPage = () => {
                                 Zero Preservatives
                             </h3>
                             <p className="text-[#8B7355]">
-                                You will find absolutely no preservatives in any of our biscuits. Our commitment is to freshness and the pure, unadulterated taste of tradition.
+                                You will find absolutely no preservatives in any of our cookies. Our commitment is to freshness and the pure, unadulterated taste of tradition.
                             </p>
                         </div>
 
