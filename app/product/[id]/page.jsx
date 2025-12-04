@@ -520,10 +520,12 @@ const ProductPage = () => {
           <div className="h-px bg-linear-to-r from-transparent via-[#D4A574] to-transparent mb-8"></div>
 
           {/* Bottom */}
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between text-sm text-[#B8956A]">
-            <p>© 2024 3SK Cookies. All rights reserved.</p>
-            <p className="mt-4 md:mt-0">Handcrafted with ❤️ in India</p>
-          </div>
+          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6 mt-4 md:mt-0">
+              <p>Handcrafted with ❤️ in India</p>
+              <p>
+                📞 <a href="tel:+917296937881" className="hover:text-[#D4A574]">+91 72969 37881</a>
+              </p>
+            </div>
         </div>
       </footer>
     </div>
