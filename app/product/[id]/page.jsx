@@ -259,7 +259,7 @@ const ProductPage = () => {
                 className="md:hidden"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
-                {mobileMenuOpen ? <X /> : <Menu  />}
+                {mobileMenuOpen ? <X /> : <Menu />}
               </button>
             </div>
           </div>
@@ -521,11 +521,11 @@ const ProductPage = () => {
 
           {/* Bottom */}
           <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6 mt-4 md:mt-0">
-              <p>Handcrafted with ❤️ in India</p>
-              <p>
-                📞 <a href="tel:+917296937881" className="hover:text-[#D4A574]">+91 72969 37881</a>
-              </p>
-            </div>
+            <p>Handcrafted with ❤️ in India</p>
+            <p>
+              📞 <a href="tel:+917296937881" className="hover:text-[#D4A574]">+91 72969 37881</a>
+            </p>
+          </div>
         </div>
       </footer>
     </div>
